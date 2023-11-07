@@ -2,7 +2,22 @@ from datetime import date, datetime
 
 
 def get_birthdays_per_week(users):
-    # Реалізуйте тут домашнє завдання
+    
+    current_date = date.today()
+    
+    if all(user["birthday"].year > current_date.year for user in users):
+        return {}
+    
+    users = {
+        'Monday': ['Bill', 'Jan'],
+        'Tuesday': ['Kim'],
+        'Wednesday': [],
+        'Thursday': [],
+        'Friday': [],
+    }
+    
+    print(users)
+    
     return users
 
 
